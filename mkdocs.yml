@@ -1,0 +1,117 @@
+site_name: OSIPI Perfusion Imaging Artifacts
+site_description: >
+  The OSIPI Perfusion Imaging Artifacts lexicon is a collection of
+  contrast-agent based perfusion MRI artifacts and their solutions.
+  The lexicon is a part of the OSIPI project, which aims to provide
+  a comprehensive overview of perfusion imaging.
+site_author: Open Science Initiative for Perfusion Imaging (OSIPI)
+repo_url: https://github.com/OSIPI/perfusion-artifacts
+repo_name: perfusion-artifacts
+copyright: >
+  <a href="#__consent">Change cookie settings</a>
+
+theme:
+  name: material
+  logo: assets/OSIPI_logo.png
+  favicon: assets/OSIPI_logo_only_square.png
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - search.suggest
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+    annotation: material/plus-circle
+    repo: fontawesome/brands/github
+
+docs_dir: docs
+
+nav:
+  - Home: index.md
+  - Overview:
+      - About Caplex: example_page.md
+      - How to use Caplex: example_page.md
+      - How to contribute: example_page.md
+  - Artifacts:
+      - Overview: example_page.md
+      - Motion artifacts: example_page.md
+      - Susceptibility artifacts: example_page.md
+      - Perfusion artifacts: example_page.md
+      - Other artifacts: example_page.md
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+
+markdown_extensions:
+  - toc:
+      permalink: True
+  - admonition
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - attr_list
+  - md_in_html
+  - abbr
+
+extra:
+  analytics:
+    provider: google
+    property: G-27M7GKVZFQ
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://forms.gle/dsfUEZx6P91rBwJe6" target="_blank" rel="noopener">feedback form</a>.
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://forms.gle/dsfUEZx6P91rBwJe6" target="_blank" rel="noopener">feedback form</a>.
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our lexicon and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our lexicon better.
